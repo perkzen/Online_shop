@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="prijava.js" defer></script>
+    <title>Prijava</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="html/index.html"><h4>Splena Trgovina</h4></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="html/index.html">Domov</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="jsonTrgovina.html">Trgovina</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="jsonTrgovina.html">Oblačila</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Več
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="html/clanarina.html">Članarina</a></li>
+                        <li><a class="dropdown-item" href="html/onas.html">O nas</a></li>
+                    </ul>
+                </li>
+                <li id="objavaArtikla"></li>
+            </ul>
+            <form class="d-flex">
+                <a class="btn btn-success" style="margin-right: 20px" href="html/kosarica.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-basket2-fill" viewBox="0 0 16 16">
+                        <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383L5.93 1.757zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1z"/>
+                    </svg>
+                    Košarica </a>
+                <a class="btn btn-outline-success" href="html/registracija.html">Registracija</a>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<ul class="nav nav-pills float-end m-3">
+    <li class="nav-item">
+        <button class="btn btn-success" aria-current="page" onclick="odjava()">Odjava</button>
+    </li>
+</ul>
+
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <form id="registracija" name="registracija" method="post"
+              onsubmit="prijava(event)"
+              class="from from-control m-3 p-3 shadow p-3 mb-5 bg-white rounded">
+            <h1>Prijava</h1>
+            <div class="">
+                <p>Ime: </p>
+                <input type="text" id="name" name="ime" class="form-control">
+                <p>Geslo: </p>
+                <input type="password" id="pass" name="pass" class="form-control">
+                <button type="submit" class="btn btn-success mt-2">Prijava</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<footer class="mt-4">
+    <div class="container-fluid bg-light">
+        <div class="row text-dark">
+            <p class="col-10">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit augue in sagittis lacinia.
+                Duis
+                iaculis eros ut dictum luctus. Nam et condimentum turpis. Nulla lacinia finibus maximus.
+                Pellentesque
+                vehicula vehicula risus eu scelerisque. Pellentesque volutpat, orci ac suscipit ornare, neque erat
+                lobortis
+                leo, sit amet gravida massa massa ut ipsum. Donec vel eleifend orci. Vivamus tempus pretium magna
+            </p>
+            <div class="col-lg-2">
+                <ul class="nav nav-pills float-end m-3">
+                    <li class="nav-item">
+                        <a class="nav-link active bg-success" aria-current="page" href="#">Nazaj gor</a>
+                    </li>
+                </ul>
+            </div>
+            <p class="text-center"><b>Avotr: Domen Perko</b></p>
+
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
